@@ -1,5 +1,6 @@
 # GFS-Seg
 This is the implementation of [**Generalized Few-shot Semantic Segmentation**](https://arxiv.org/abs/2010.05210) (CVPR 2022). 
+
 ![image](https://user-images.githubusercontent.com/68939582/160376201-2bc953b6-280e-4cb8-b512-31ffa3a3e579.png)
 
 
