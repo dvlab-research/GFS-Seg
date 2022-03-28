@@ -1,0 +1,58 @@
+DATA:
+  data_root: /data/home/dataset/coco2014/ 
+  train_list: /data/home/dataset/coco2014/train_contain_crowd_data_list.txt  
+  val_list: /data/home/dataset/coco2014/val_contain_crowd_data_list.txt         
+  #  
+  classes: 81
+
+
+TRAIN:
+  layers: 50
+  sync_bn: False  # [deprecated] adopt syncbn or not
+  train_h: 473
+  train_w: 473
+  scale_min: 0.5  
+  scale_max: 2.0  
+  rotate_min: -10  
+  rotate_max: 10 
+  zoom_factor: 8  
+  ignore_label: 255
+  aux_weight: 0.4
+  train_gpu: [0, 1] #[0, 1, 2, 3]
+  workers: 24  # data loader workers
+  batch_size: 12 # batch size for training
+  batch_size_val: 20 # batch size for validation during training, memory and speed tradeoff
+  base_lr: 0.01
+  epochs: 50
+  start_epoch: 0
+  power: 0.9
+  momentum: 0.9
+  weight_decay: 0.0001
+  manual_seed: 321
+  print_freq: 20
+  save_freq: 10
+  save_path: exp/coco/split0_1shot/model
+  weight: 
+  resume: 
+  data_split: 0
+  shot: 1
+  novel_num: 20  
+  start_val_epoch: 46
+  evaluate: True
+  only_evaluate: False
+
+  ### DATASET
+  use_coco: True
+  val_supp_seed_list: [123, 321, 456, 654, 999]  
+
+
+Distributed:
+  dist_url: tcp://127.0.0.1:6789
+  dist_backend: 'nccl'
+  multiprocessing_distributed: False
+  world_size: 1
+  rank: 0
+  use_apex: False
+  opt_level: 'O0'
+  keep_batchnorm_fp32:
+  loss_scale:

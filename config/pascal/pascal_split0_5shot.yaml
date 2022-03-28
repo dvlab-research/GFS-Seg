@@ -1,0 +1,57 @@
+DATA:
+  data_root: /home/zhuotaotian/smtxlun2/dataset/voc2012/
+  train_list:  /home/zhuotaotian/smtxlun2/dataset/voc2012/list/train_aug.txt
+  val_list:  /home/zhuotaotian/smtxlun2/dataset/voc2012/list/val.txt
+  classes: 21
+
+
+TRAIN:
+  layers: 50
+  sync_bn: False  # [deprecated] adopt syncbn or not
+  train_h: 473
+  train_w: 473
+  scale_min: 0.5  
+  scale_max: 2.0  
+  rotate_min: -10  
+  rotate_max: 10 
+  zoom_factor: 8  
+  ignore_label: 255
+  aux_weight: 0.4
+  train_gpu: [0]
+  workers: 16  
+  batch_size: 6  
+  batch_size_val: 1
+  base_lr: 0.01
+  epochs: 50
+  start_epoch: 0
+  power: 0.9
+  momentum: 0.9
+  weight_decay: 0.0001
+  manual_seed: 321
+  print_freq: 20
+  save_freq: 10
+  save_path: exp/pascal/split0_5shot/model
+  weight:
+  resume:  
+  data_split: 0
+  shot: 5
+  novel_num: 5  
+  start_val_epoch: 25
+  evaluate: True  
+  only_evaluate: False  
+
+  ### DATASET
+  use_coco: False
+  val_supp_seed_list: [123, 321, 456, 654, 999]
+
+
+Distributed:
+  dist_url: tcp://127.0.0.1:6789
+  dist_backend: 'nccl'
+  multiprocessing_distributed: False
+  world_size: 1
+  rank: 0
+  use_apex: False
+  opt_level: 'O0'
+  keep_batchnorm_fp32:
+  loss_scale:
