@@ -63,6 +63,7 @@ Our work is closely related to the following assets that inspire our implementat
 + RePRI: https://github.com/mboudiaf/RePRI-for-Few-Shot-Segmentation
 + HSNet: https://github.com/juhongm999/hsnet
 + SCL: https://github.com/zbf1991/SCL
++ ASGNet: https://github.com/Reagan1311/ASGNet
 + CANet: https://github.com/icoz69/CaNet
 + PANet: https://github.com/kaixin96/PANet
 + PPNet: https://github.com/Xiangyi1996/PPNet-PyTorch
