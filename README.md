@@ -1,5 +1,5 @@
 # GFS-Seg
-This is the implementation of Generalized Few-shot Semantic Segmentation (CVPR 2022). 
+This is the implementation of [**Generalized Few-shot Semantic Segmentation**](https://arxiv.org/abs/2010.05210) (CVPR 2022). 
 
 # Get Started
 
