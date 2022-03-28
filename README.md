@@ -66,7 +66,6 @@ Our work is closely related to the following assets that inspire our implementat
 + CANet: https://github.com/icoz69/CaNet
 + PANet: https://github.com/kaixin96/PANet
 + PPNet: https://github.com/Xiangyi1996/PPNet-PyTorch
-+ PSPNet: https://github.com/hszhao/semseg
 + PFENet: https://github.com/dvlab-research/PFENet
 + SemSeg: https://github.com/hszhao/semseg
 
