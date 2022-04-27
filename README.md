@@ -14,7 +14,7 @@ This is the implementation of [**Generalized Few-shot Semantic Segmentation**](h
 + CUDA 10.1
 
 ### Datasets and Data Preparation
-Different from [**PFENet**](https://github.com/dvlab-research/PFENet) (5953 images), in GFS-Seg, the training set of Pascal-VOC is used with augmented data (10582 images), following the original [**PSPNet**](https://github.com/hszhao/semseg). But our experiments in FS-Seg are yieled follow the setting of PFENet.
+Different from [**PFENet**](https://github.com/dvlab-research/PFENet) (5953 images), in GFS-Seg, the training set of Pascal-VOC is used with augmented data (10582 images), following the original [**PSPNet**](https://github.com/hszhao/semseg). But our experiments in FS-Seg follow the setting of PFENet.
 
 The preparation of [**COCO 2014**](https://cocodataset.org/#download) follows [**PFENet**](https://github.com/dvlab-research/PFENet). 
 
