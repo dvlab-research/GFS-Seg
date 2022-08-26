@@ -234,9 +234,10 @@ class SemData(Dataset):
             label_class.remove(0)
         if 255 in label_class:
             label_class.remove(255)
-
+            
+        raw_label = label.copy()
         for c in label_class:
-            x,y = np.where(label == c)
+            x,y = np.where(raw_label == c)
   
             if c in self.sub_list:
                 label[x[:], y[:]] = (self.sub_list.index(c) + 1)    # ignore the background in sublist, + 1
